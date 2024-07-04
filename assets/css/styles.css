@@ -74,7 +74,7 @@ ul {
 header {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: right;
 }
 
 header,
@@ -121,6 +121,7 @@ main {
   IDs
 */
 #toggle {
+  display: flex;
   font-size: 1.52em;
   margin: 0;
   padding: 0;
@@ -132,5 +133,7 @@ main {
 }
 
 #theme-switcher {
+
   visibility: hidden;
+  justify-content: right;
 }
