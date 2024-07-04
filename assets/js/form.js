@@ -1,3 +1,8 @@
+// import functions from logic.js
+//import { updateLocalStorage } from './logic.js';
+
+//updateLocalStorage(); // This will call the function from logic.js
+
 // TODO: Create a variable that selects the form element
 const usernameInput = document.querySelector('#username');
 const titleInput = document.querySelector('#title');
@@ -15,9 +20,12 @@ const submitButton = document.querySelector('#submit');
 let redirectURL = '';
 console.log('location: ', location)
 
+
 const redirectPage = function (url) {
   console.log("url: ",url)
+  console.log('location-before: ', location)
   redirectURL = url;
+  console.log('location-after: ', location)
   location.assign(url);
 };
 
@@ -25,7 +33,7 @@ const redirectPage = function (url) {
 // Call the function to handle the form submission.
 
 submitButton.addEventListener('click', function (event) {
-//event.preventDefault();
+event.preventDefault();
 
   // create user object from submission
   //When the button is clicked, we store the current
@@ -39,12 +47,13 @@ submitButton.addEventListener('click', function (event) {
 
   };
 
-  if (username && title && content) {
- // set new submission to local storage
+  // set new submission to local storage
   //We use the JSON method JSON.stringify() to turn the object into a string
   //We use setItem() to store the stringified object with localStorage
-  localStorage.setItem('blogPost', JSON.stringify(blogPost));
-    redirectPage("file:///C:/Users/Jeffe/bootcamp/challenge-week4/blog.html?");
+  if (username && title && content) {
+  //localStorage.setItem('blogPost', JSON.stringify(blogPost));
+  updateLocalStorage(blogPost); // This will call the function from logic.js
+  redirectPage("/blog.html");
 } else{
      alert('Please complete the form.');
   }

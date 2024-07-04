@@ -5,10 +5,22 @@
 /*
   Tags
 */
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 aside {
   background: linear-gradient(
-    var(--light-accent), 
-    var(--circle-color), 
+    var(--light-accent),
+    var(--circle-color),
     var(--dark-accent)
   );
   clip-path: circle(20rem at center);
@@ -17,7 +29,7 @@ aside {
   align-items: center;
 }
 
-aside, 
+aside,
 section {
   flex: 1 1 50%;
 }
