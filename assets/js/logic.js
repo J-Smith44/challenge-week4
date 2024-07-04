@@ -5,6 +5,7 @@
 //We add the addEventListener() method to listen for an event on the themeSwitcher element, as follows:
 const themeSwitcher = document.querySelector('#theme-switcher');
 const container = document.querySelector('.container');
+const span = document.querySelector('#emoji');
 
 // Set default mode to dark
 let mode = 'dark';
@@ -18,7 +19,11 @@ themeSwitcher.addEventListener('click', function () {
   //Inside the function, we write the code that we want executed every time the event happens. We use setAttribute() to change the background to a light color if the background is in dark mode
   if (mode === 'dark') {
     mode = 'light';
+
     container.setAttribute('class', 'light');
+
+    span.textContent = '🌒';
+
   }
   // If mode is light, apply dark background
   //Else, when a user clicks, we set the background to a dark mode by setting the dark class

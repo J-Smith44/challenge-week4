@@ -109,3 +109,7 @@ section {
   position: absolute;
   bottom: -2rem;
 }
+
+#theme-switcher {
+  justify-content: left;
+}
