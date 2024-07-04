@@ -6,6 +6,7 @@
 const themeSwitcher = document.querySelector('#theme-switcher');
 const container = document.querySelector('.container');
 const span = document.querySelector('#emoji');
+const aside = document.querySelector('aside');
 
 // Set default mode to dark
 let mode = 'dark';
@@ -24,12 +25,20 @@ themeSwitcher.addEventListener('click', function () {
 
     span.textContent = '🌒';
 
+    //aside.style.background = 'linear-gradient(#f9f9fb, #563d7c, #222)';
+    aside.style.background = 'linear-gradient(#f9f9fb, #ffb100, #222)';
   }
   // If mode is light, apply dark background
   //Else, when a user clicks, we set the background to a dark mode by setting the dark class
   else {
     mode = 'dark';
     container.setAttribute('class', 'dark');
+    span.textContent = '☀️';
+
+    //aside.style.background = 'linear-gradient(f9f9fb, #ffb100, #222)';
+   // aside.style.background = 'linear-gradient(f9f9fb, #ffb100, #222)';
+   aside.style.background = 'linear-gradient(#f9f9fb, #563d7c, #222)';
+
   }
 });
 
