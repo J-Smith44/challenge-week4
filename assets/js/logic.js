@@ -46,5 +46,12 @@ themeSwitcher.addEventListener('click', function () {
 // TODO: Create functions to read and write from local storage
 
 function updateLocalStorage(blogPost){
-    localStorage.setItem('blogPost', JSON.stringify(blogPost));
+  let addData = [];
+  if (localStorage.getItem('blogPost') != null) {
+    addData = JSON.parse(localStorage.getItem('blogPost'));
+  }
+  addData.push(blogPost);
+
+
+    localStorage.setItem('blogPost', JSON.stringify(addData));
 }

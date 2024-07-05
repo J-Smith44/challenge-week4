@@ -105,3 +105,9 @@ ul {
 #love {
   text-align: center;
 }
+
+#theme-switcher2 {
+
+  visibility: hidden;
+  justify-content: right;
+}

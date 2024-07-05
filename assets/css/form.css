@@ -23,7 +23,7 @@ aside {
     var(--circle-color),
     var(--dark-accent)
   );
-  clip-path: circle(20rem at center);
+  clip-path: circle(15rem at center);
   display: flex;
   justify-content: center;
   align-items: center;
