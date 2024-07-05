@@ -17,6 +17,7 @@ body {
   min-height: 100%;
   line-height: 1;
   font-family: sans-serif;
+  border-style: solid;
 }
 
 ​h1,
@@ -88,6 +89,10 @@ main {
   justify-content: center;
   align-items: stretch;
   border-top: double 1rem;
+
+}
+.container {
+  border-style: solid;
 }
 
 /*
